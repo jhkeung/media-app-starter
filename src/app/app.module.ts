@@ -4,22 +4,29 @@ import { AppComponent } from './app.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ShoppingComponent } from './shopping/shopping.component';
-import {MatButtonModule, MatCardModule} from "@angular/material";
+import {MatButtonModule, MatCardModule, MatIconModule, MatIconRegistry} from "@angular/material";
 import {MockItunesService} from "./mock-itunes.service";
+import { ContactComponent } from './contact/contact.component';
+import { ApiComponent } from './api/api.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    ShoppingComponent
+    ShoppingComponent,
+    ContactComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
     MatCardModule,
     AppRoutingModule,
-    MatButtonModule
-  ],
+    MatButtonModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    FormsModule],
   providers: [MockItunesService],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MockItunesService} from "../mock-itunes.service";
 import {Media, MediaResponse} from "../media-response";
 
@@ -14,14 +14,13 @@ export class ShoppingComponent implements OnInit {
   constructor(private mediaService: MockItunesService) {
 
   }
+
   ngOnInit(): void {
     this.mediaService.getMusicVideosByArtist()
       .subscribe((data: MediaResponse) => {
         this.media = data.results;
         this.totalCount = data.resultCount;
       });
-
-    console.log(this.media)
   }
 
 }

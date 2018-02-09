@@ -8,7 +8,7 @@ export class Media {
   artistName: string;
   kind: string; // music-video, song
   previewUrl: string;
-  artworkUrl1100: string;
+  artworkUrl100: string;
   releaseDate: Date;
   trackPrice: number;
   collectionPrice: number;
