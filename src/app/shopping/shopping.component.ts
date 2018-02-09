@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MockItunesService} from "../mock-itunes.service";
+import {Media, MediaResponse} from "../media-response";
 
 @Component({
   selector: 'app-shopping',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping.component.css']
 })
 export class ShoppingComponent implements OnInit {
+  media: Media[];
+  totalCount: number;
 
-  constructor() { }
+  constructor(private mediaService: MockItunesService) {
 
-  ngOnInit() {
+  }
+  ngOnInit(): void {
+    this.mediaService.getMusicVideosByArtist()
+      .subscribe((data: MediaResponse) => {
+        this.media = data.results;
+        this.totalCount = data.resultCount;
+      });
+
+    console.log(this.media)
   }
 
 }
