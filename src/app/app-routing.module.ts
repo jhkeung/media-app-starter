@@ -5,7 +5,7 @@ import {ShoppingComponent} from "./shopping/shopping.component";
 
 const routes: Routes = [
   {path: 'about', component: LandingPageComponent},
-  {path: 'browse', component: ShoppingComponent }
+  {path: 'browse', component: ShoppingComponent },
   {path: '', pathMatch: 'full', redirectTo: 'about'}
 ];
 
