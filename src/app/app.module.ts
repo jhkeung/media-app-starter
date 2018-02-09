@@ -1,23 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
 import {AppRoutingModule} from "./app-routing.module";
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { ShoppingComponent } from './shopping/shopping.component';
-import {MatButtonModule, MatCardModule, MatIconModule, MatIconRegistry} from "@angular/material";
+import {LandingPageComponent} from './landing-page/landing-page.component';
+import {ShoppingComponent} from './shopping/shopping.component';
+import {MatButtonModule, MatCardModule, MatIconModule, MatTabsModule} from "@angular/material";
 import {MockItunesService} from "./mock-itunes.service";
-import { ContactComponent } from './contact/contact.component';
-import { ApiComponent } from './api/api.component';
+import {ApiComponent} from './api/api.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
+import {HeaderComponent} from './header/header.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     ShoppingComponent,
-    ContactComponent,
-    ApiComponent
+    ApiComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,10 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MatButtonModule,
     MatIconModule,
     ReactiveFormsModule,
-    FormsModule],
+    FormsModule,
+    MatTabsModule,
+    BrowserAnimationsModule
+  ],
   providers: [MockItunesService],
   bootstrap: [AppComponent]
 })

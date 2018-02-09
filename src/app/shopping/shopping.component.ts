@@ -8,18 +8,21 @@ import {Media, MediaResponse} from "../media-response";
   styleUrls: ['./shopping.component.css']
 })
 export class ShoppingComponent implements OnInit {
-  media: Media[];
-  totalCount: number;
+  musicVideos: Media[];
+  movies: Media[];
 
   constructor(private mediaService: MockItunesService) {
-
   }
 
   ngOnInit(): void {
     this.mediaService.getMusicVideosByArtist()
       .subscribe((data: MediaResponse) => {
-        this.media = data.results;
-        this.totalCount = data.resultCount;
+        this.musicVideos = data.results;
+      });
+
+    this.mediaService.getMovies()
+      .subscribe((data: MediaResponse) => {
+        this.movies = data.results;
       });
   }
 
