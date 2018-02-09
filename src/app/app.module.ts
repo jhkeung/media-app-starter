@@ -7,7 +7,6 @@ import {ShoppingComponent} from './shopping/shopping.component';
 import {MatButtonModule, MatCardModule, MatIconModule, MatTabsModule} from "@angular/material";
 import {MockItunesService} from "./mock-itunes.service";
 import {ApiComponent} from './api/api.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HeaderComponent} from './header/header.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
@@ -25,8 +24,6 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AppRoutingModule,
     MatButtonModule,
     MatIconModule,
-    ReactiveFormsModule,
-    FormsModule,
     MatTabsModule,
     BrowserAnimationsModule
   ],

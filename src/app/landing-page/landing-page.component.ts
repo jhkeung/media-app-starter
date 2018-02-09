@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,18 +7,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class LandingPageComponent {
 
-  form: FormGroup;
-
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      email: ['', Validators.compose([Validators.email, Validators.required])],
-      mailList: true
-    });
-  }
-
-  submitForm() {
-    console.log('Entry received!', this.form.value);
-    this.form.reset();
+  constructor() {
   }
 
 }

@@ -1,20 +1,23 @@
 <div class="container-fluid">
-  <mat-tab-group>
-    <mat-tab label="Music Videos">
-      <div class="row">
-        <div class="col-6 my-3" *ngFor="let m of musicVideos">
+  <div class="row">
+
+    <mat-tab-group>
+      <mat-tab label="Music Videos">
+        <div class="col-6 my-3">
           <mat-card class="example-card">
             <mat-card-header class="d-flex justify-content-between">
 
-              <mat-card-title>{{m.trackName}}</mat-card-title>
-              <mat-card-subtitle>{{m.artistName}}</mat-card-subtitle>
+              <mat-card-title>Partition</mat-card-title>
+              <mat-card-subtitle>Beyoncé</mat-card-subtitle>
 
-              <div>{{m.trackPrice | currency:'CAD'}}</div>
+              <div>$1.99</div>
             </mat-card-header>
 
             <mat-card-content>
               <video width="100%" controls>
-                <source [src]="m.previewUrl" type="video/mp4">
+                <source
+                  src="http://video.itunes.apple.com/apple-assets-us-std-000001/Video/v4/7f/94/62/7f946294-d872-7203-840d-b16c26ad9b6c/mzvf_6426187122334993115.640x480.h264lc.U.p.m4v"
+                  type="video/mp4">
               </video>
             </mat-card-content>
             <mat-card-actions>
@@ -22,35 +25,39 @@
             </mat-card-actions>
           </mat-card>
         </div>
-      </div>
-    </mat-tab>
+      </mat-tab>
 
-    <mat-tab label="Movies">
-      <div class="row">
-        <div class="col-6 my-3" *ngFor="let m of movies">
+      <mat-tab label="Movies">
+        <div class="col-6 my-3">
           <mat-card class="example-card">
             <mat-card-header class="d-flex justify-content-between">
 
-              <mat-card-title>{{m.trackName}}</mat-card-title>
-              <mat-card-subtitle>{{m.artistName}}</mat-card-subtitle>
+              <mat-card-title>Tangled</mat-card-title>
+              <mat-card-subtitle>Nathan Greno & Byron Howard</mat-card-subtitle>
 
-              <div>{{m.trackPrice | currency:'CAD'}}</div>
+              <div>$9.99</div>
             </mat-card-header>
 
             <mat-card-content>
               <video width="100%" controls>
-                <source [src]="m.previewUrl" type="video/mp4">
+                <source
+                  src="http://video.itunes.apple.com/apple-assets-us-std-000001/Video127/v4/93/b3/2f/93b32f59-4cbc-0b9e-6768-e724ff44298c/mzvf_3942371303003260437.640x480.h264lc.U.p.m4v"
+                  type="video/mp4">
               </video>
-              <p>{{m.longDescription}}</p>
+              <p>Disney presents a new twist on one of the most hilarious and hair-raising tales ever told. Your whole
+                family will get tangled up in the fun, excitement of this magical motion picture. When the kingdoms most
+                wanted and most charming bandit Flynn Rider hides in a mysterious tower, the last thing he expects to
+                find is Rapunzel, a spirited teen with an unlikely superpower 70 feet of magical golden hair! Together,
+                the unlikely duo sets off on a fantastic journey filled with surprising heroes, laughter and suspense.
+                Let your hair down and get ready to cheer for Tangled.</p>
             </mat-card-content>
             <mat-card-actions>
               <button mat-button>BUY</button>
             </mat-card-actions>
           </mat-card>
         </div>
-      </div>
-    </mat-tab>
-  </mat-tab-group>
-
+      </mat-tab>
+    </mat-tab-group>
+  </div>
 </div>
 
